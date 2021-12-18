@@ -1,25 +1,12 @@
 version: '3.7'
 services:
-#  mysql:
-#    image: mysql:8.0
-#    ports:
-#      - '3306:3306'
-#    volumes:
-#      - ./data:/var/lib/mysql
-#    environment:
-#      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-#      - MYSQL_DATABASE=app
-#      - MYSQL_USER=app
-#      - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
   postgres:
-        image: postgres:latest
-#        restart: always
-        ports:
-            - '5432:5432'
-        volumes:
-            - ./data:/var/lib/postgresql
-        environment:
-#            - POSTGRES_RANDOM_ROOT_PASSWORD=yes
-            - POSTGRES_DB=app
-            - POSTGRES_USER=app
-            - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
